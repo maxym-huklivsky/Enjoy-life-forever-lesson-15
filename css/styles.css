@@ -11,6 +11,10 @@ p {
 	margin: 0;
 }
 
+img {
+	display: block;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -20,33 +24,26 @@ ul {
 	padding-left: 30px;
 }
 
+li:not(:last-child) {
+	margin-bottom: 20px;
+}
+
 /* Video */
 .video {
 	display: flex;
-	width: 100%;
-	min-height: 100px;
-	margin: 20px 0;
 	padding: 15px;
+	margin: 20px 0;
 
 	background-color: #e6f7ff;
 }
 
-.video-pic {
-	margin-right: 15px;
+.video-wrap {
 	position: relative;
-}
-
-.video-text {
-	max-width: 200px;
-
-	font-size: 15px;
-	line-height: 1.7;
 }
 
 .play {
 	position: absolute;
-	bottom: 20px;
-	left: 0;
+	bottom: 0;
 	width: 40px;
 	height: 40px;
 	display: flex;
@@ -56,22 +53,47 @@ ul {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+.video-link {
+	margin-right: 25px;
+}
+
 .play-icon {
 	fill: transparent;
 	stroke: #ffffff;
 }
 
+.video-text {
+	font-size: 15px;
+	line-height: 1.5;
+}
+
 /* Container */
 .container {
 	padding: 0 20px;
-	max-width: 480px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+@media screen and (max-width:480px) {
+	.container {
+		max-width: 480px;
+	}
+}
+
+/* @media screen and (min-width:768px) {
+	.container {
+		width: 768px;
+	}
+} */
+
 /* Verse-link */
 .verse-link--lite {
 	color: #9fb9e3;
+}
+
+.verse-link--lite-wg {
+	color: #9fb9e3;
+	font-weight: 700;
 }
 
 .verse-link--dark {
@@ -87,10 +109,17 @@ strong {
 }
 
 /* Title */
-.title {
+.title--dark {
 	margin-bottom: 20px;
 
 	color: #bf2f13;
+	font-size: 25px;
+}
+
+.title--light {
+	margin-bottom: 20px;
+
+	color: #f57b62;
 	font-size: 25px;
 }
 
@@ -154,4 +183,64 @@ strong {
 	margin-bottom: 210px;
 
 	font-size: 24px;
+}
+
+.more-text {
+	margin-bottom: 20px;
+}
+
+/* Proof */
+.proof {
+	padding: 40px 0;
+}
+
+.proof-text {
+	margin-bottom: 20px;
+}
+
+/* Important */
+.important {
+	padding: 30px 0;
+
+	background-color: #fff;
+	color: #292929;
+}
+
+.important-desc-pic {
+	font-size: 17px;
+}
+
+/* Some say */
+.some-say {
+	padding: 30px 0;
+
+	background-color: #fff;
+	color: #292929;
+}
+
+/* Result */
+.result {
+	padding: 40px 0;
+}
+
+.result-title {
+	text-transform: uppercase;
+}
+
+.result-text {
+	margin-bottom: 30px;
+}
+
+.result-qa {
+	color: #375255;
+	font-weight: 700;
+	font-size: 25px;
+}
+
+/* Footer */
+.goal {
+	padding: 15px 0;
+
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
 }
