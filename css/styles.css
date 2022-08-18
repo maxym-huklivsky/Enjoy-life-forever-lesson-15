@@ -74,17 +74,17 @@ li:not(:last-child) {
 	margin-right: auto;
 }
 
-@media screen and (max-width:480px) {
+@media screen and (min-width:480px) {
 	.container {
-		max-width: 480px;
+		width: 480px;
 	}
 }
 
-/* @media screen and (min-width:768px) {
+@media screen and (min-width:768px) {
 	.container {
 		width: 768px;
 	}
-} */
+}
 
 /* Verse-link */
 .verse-link--lite {
@@ -98,13 +98,19 @@ li:not(:last-child) {
 
 .verse-link--dark {
 	color: #4a6da7;
+}
+
+.verse-link--dark-wg {
+	color: #4a6da7;
 	font-weight: 700;
 }
 
 /* Text */
 p,
 li,
-strong {
+strong,
+span,
+textarea {
 	line-height: 1.5;
 }
 
@@ -153,7 +159,7 @@ strong {
 
 /* More */
 .more {
-	padding: 30px 0;
+	padding: 45px 0 10px;
 
 	background-color: #ffffff;
 	color: #292929;
@@ -191,7 +197,17 @@ strong {
 
 /* Proof */
 .proof {
-	padding: 40px 0;
+	padding: 45px 0 25px;
+}
+
+.proof-title::before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	margin-bottom: 30px;
+
+	background-color: #fff;
 }
 
 .proof-text {
@@ -220,7 +236,7 @@ strong {
 
 /* Result */
 .result {
-	padding: 40px 0;
+	padding: 45px 0 35px;
 }
 
 .result-title {
@@ -232,15 +248,106 @@ strong {
 }
 
 .result-qa {
-	color: #375255;
+	color: #91a9ac;
 	font-weight: 700;
 	font-size: 25px;
 }
 
-/* Footer */
-.goal {
-	padding: 15px 0;
+.result-label {
+	display: block;
+	padding: 20px 15px 0px;
+	margin-top: 45px;
 
 	border-top: 1px solid #ffffff;
-	border-bottom: 1px solid #ffffff;
 }
+
+.result-label-text {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.result-input {
+	width: 100%;
+	height: 40px;
+
+	background-color: transparent;
+	border: 1px solid #626262;
+	;
+	border-radius: 2px;
+}
+
+/* Goal */
+.goal-container {
+	margin: 20px 0;
+	padding: 20px 20px 30px;
+
+	background-color: #f1f1f1;
+	color: #292929;
+}
+
+.goal-title {
+	margin-bottom: 25px;
+
+	color: #375255;
+	font-size: 30px;
+}
+
+.goal-label {
+	margin-bottom: 20px;
+	display: flex;
+	gap: 10px;
+	position: relative;
+}
+
+.goal-checkbox {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.goal-checkbox:checked+.icon-check {
+	opacity: 1;
+}
+
+.goal-checkbox:checked~.icon-uncheck {
+	opacity: 0;
+}
+
+.icon-check {
+	stroke: #345996;
+	opacity: 0;
+	transition: 150ms;
+}
+
+.icon-uncheck {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 25px;
+	height: 25px;
+	transition: 150ms;
+
+	background-color: #fff;
+	border-radius: 3px;
+}
+
+.goal-textarea {
+	width: 100%;
+	height: 65px;
+	padding: 5px 10px;
+	resize: none;
+
+	border: none;
+	font-size: 15px;
+}
+
+/* Interesting */
