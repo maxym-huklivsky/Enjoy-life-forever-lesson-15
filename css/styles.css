@@ -1,5 +1,5 @@
 body {
-	font-size: 20px;
+	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #121212;
 	color: #ffffff;
@@ -110,7 +110,7 @@ p,
 li,
 strong,
 span,
-textarea {
+a {
 	line-height: 1.5;
 }
 
@@ -155,6 +155,10 @@ textarea {
 
 	font-size: inherit;
 	color: #f57b62;
+}
+
+.important-desc-pic {
+	color: #a7a7a7;
 }
 
 /* More */
@@ -278,7 +282,7 @@ textarea {
 
 /* Goal */
 .goal-container {
-	margin: 20px 0;
+	margin-bottom: 45px;
 	padding: 20px 20px 30px;
 
 	background-color: #f1f1f1;
@@ -297,6 +301,8 @@ textarea {
 	display: flex;
 	gap: 10px;
 	position: relative;
+
+	user-select: none;
 }
 
 .goal-checkbox {
@@ -322,6 +328,8 @@ textarea {
 }
 
 .icon-check {
+	margin-top: 4px;
+
 	stroke: #345996;
 	opacity: 0;
 	transition: 150ms;
@@ -329,7 +337,7 @@ textarea {
 
 .icon-uncheck {
 	position: absolute;
-	top: 0;
+	top: 4px;
 	left: 0;
 	display: block;
 	width: 25px;
@@ -351,20 +359,56 @@ textarea {
 }
 
 /* Interesting */
+.goal-container-mpb {
+	padding-bottom: 20px;
+	margin-bottom: 17px;
+}
 
+.interesting-title {
+	font-size: 25px;
+	color: #375255;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+}
 
+.interesting-list {
+	list-style: none;
+	padding: 0;
+}
 
+.interesting-item {
+	padding: 15px 0 5px;
 
+	border-top: 1px solid #a7a7a7;
+}
 
+.interesting-pic {
+	margin-bottom: 15px;
+}
 
+/* Footer */
+.footer {
+	padding: 15px 0 60px;
 
+	border-top: 1px solid #a7a7a7;
+}
 
-.div {
+.footer-text {
+	color: #a7a7a7;
+	font-size: 15px;
+}
+
+.footer-text:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+/* Diamond */
+.diamond {
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	width: 65px;
-	height: 65px;
+	width: 60px;
+	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
